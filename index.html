@@ -12,6 +12,15 @@
         div {
             clear: left;
         }
+
+        body{
+            background-color: rgb(143, 143, 255);
+        }
+
+        .card{
+            background-color: white;
+            border-radius: 10px;
+        }
     </style>
 
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.17/d3.min.js"></script>
@@ -22,15 +31,19 @@
 </head>
 
 <body>
+
+    <img src="logo-epsi.png" alt="" width="200" height="140">
+
+    <div class="card">
     <h1>Data Visualisation</h1>
 
     <h2>DC Scatter Plot</h2>
 
     <div>
         <h3>Transactions Per Date, colour coded by person</h3>
-        <div id="scatter-plot"></div>
+        <div class="card" id="scatter-plot"></div>
     </div>
-
+</div>
     <script>
         queue()
             .defer(d3.json, "data/transactions.json")
@@ -75,6 +88,7 @@
             dc.renderAll();
         }
     </script>
+    
 </body>
 
 </html>
